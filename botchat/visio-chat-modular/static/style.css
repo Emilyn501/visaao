@@ -1,0 +1,130 @@
+/* --- FUNDO PERSONALIZADO --- */
+body {
+    font-family: 'Arial', sans-serif;
+    /* Linhas adicionadas para a imagem de fundo */
+    background-image: url('background.jpg'); /* Nome do seu arquivo de fundo */
+    background-size: cover; /* Garante que a imagem cubra todo o fundo */
+    background-attachment: fixed; /* O fundo não rola com o conteúdo */
+    background-color: #f4f7f6; /* Cor de fallback */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#chat-container {
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco semi-transparente */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+/* --- ÍCONE PERSONALIZADO NO CABEÇALHO --- */
+#chat-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Adicionando o ícone ao lado do texto do cabeçalho */
+#chat-header::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+    /* Linhas adicionadas para o ícone */
+    background-image: url('icon.png'); /* Nome do seu arquivo de ícone */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* ------------------------------------- */
+/* O RESTO DO CSS PERMANECE IGUAL        */
+/* ------------------------------------- */
+
+#chat-box {
+    min-height: 400px;
+    max-height: 60vh; 
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+}
+
+.ai-message {
+    align-self: flex-start;
+    background-color: #e2e6ea;
+    color: #333;
+    border-bottom-left-radius: 5px;
+}
+
+#input-area {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+#send-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+#send-button:hover {
+    background-color: #1e7e34;
+}
+
+#disclaimer {
+    background-color: #ffc107;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.scroll-to-bottom {
+    min-height: 20px;
+}
